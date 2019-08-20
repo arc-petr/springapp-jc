@@ -1,0 +1,12 @@
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 192.168.64.15.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: jenkins-x-docker-registry:5000/arc-petr/springapp-jc
+    tag: 0.0.2
